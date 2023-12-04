@@ -1,0 +1,137 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS global */
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* container */
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(47, 92, 81);
+  background: rgb(127, 229, 199);
+  background: linear-gradient(
+    0deg,
+    rgba(127, 229, 199, 1) 0%,
+    rgba(58, 110, 95, 1) 100%
+  );
+}
+
+header {
+  position: relative;
+  top: 0;
+  height: 10%;
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: end;
+}
+
+nav a {
+  color: white;
+}
+
+main {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header h1 {
+  color: white;
+  font-size: 5rem;
+}
+
+.bar {
+  display: flex;
+  width: 30%;
+  text-align: center;
+  flex-direction: column;
+}
+
+.bar h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.bar .loading {
+    position: relative;
+  /* border-radius: 10px; */
+  height: 10px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bar .progress{
+    position: absolute;
+    background-color: bisque;
+    /* width: 10px;
+    height: 10px; */
+    animation-name: progress;
+    animation-delay: 1s;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+
+
+.bar .percent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer > button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #dedede;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon-group a {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid white;
+  /* background-color: white; */
+}
+
+@keyframes progress {
+  from {width: 0;
+    height: 10px;
+    background-color: rgb(127, 229, 199);}
+  to {width: 100%;
+    height: 10px;
+    background-color: rgb(127, 229, 199);}
+}
